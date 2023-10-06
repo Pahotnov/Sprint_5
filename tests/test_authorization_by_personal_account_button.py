@@ -11,7 +11,6 @@ def test_authorization_by_personal_account_button(driver):
     driver.find_element(*Locators.PASSWORD_INPUT_FIELD).send_keys('123456')
     # Нажать кнопку "Войти"
     driver.find_element(*Locators.SIGN_IN_BUTTON).click()
-    # Явное ожидание загрузки кнопки "Оформить заказ"
     # Убедиться в наличии кнопки "Оформить заказ" вместо "Войти в аккаунт" с явным ожиданием этой кнопки
     assert WebDriverWait(driver, 3).until(
         expected_conditions.visibility_of_element_located(Locators.CHECKOUT_BUTTON)).text == 'Оформить заказ'

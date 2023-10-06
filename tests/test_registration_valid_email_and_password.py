@@ -18,5 +18,3 @@ def test_registration_valid_email_and_password(driver, fake_email, password):
         expected_conditions.visibility_of_element_located(Locators.SIGN_IN_BUTTON))
     # Проверка изменения значения лейбла формы на "Вход"
     assert driver.find_element(*Locators.SIGN_IN_TITLE).text == 'Вход'
-    # Закрыть браузер
-    driver.quit()
