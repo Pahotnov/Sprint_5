@@ -4,3 +4,4 @@ venv/
 logs/
 /Pipfile
 /Pipfile.lock
+README.txt
