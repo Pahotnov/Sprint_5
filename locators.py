@@ -1,6 +1,13 @@
 from selenium.webdriver.common.by import By
 
 
+class UnauthorizedUserGeneralLocators:
+    EMAIL_INPUT_FIELD = (By.XPATH, './/label[text()="Email"]/following-sibling::input')  # поле ввода email
+    PASSWORD_INPUT_FIELD = (By.XPATH, './/label[text()="Пароль"]/following-sibling::input')  # поле ввода пароля
+    SIGN_IN_LINK = (By.CSS_SELECTOR, 'a[href="/login"]')  # ссылка "Войти"
+    NAME_INPUT_FIELD = (By.XPATH, './/label[text()="Имя"]/following-sibling::input')  # поле ввода имени
+
+
 class MainPageLocators:
     SIGN_IN_ACCOUNT_BUTTON = (By.XPATH, './/button[text()="Войти в аккаунт"]')  # кнопка "Войти в аккаунт"
     CHECKOUT_BUTTON = (By.XPATH, './/button[text()="Оформить заказ"]')  # кнопка "Оформить заказ"
@@ -21,8 +28,6 @@ class HeaderLocators:
 
 class AuthPageLocators:
     SIGN_IN_TITLE = (By.CSS_SELECTOR, 'div[class*="Auth_login"]>h2')  # заголовок страницы "Вход"
-    EMAIL_INPUT_FIELD = (By.XPATH, './/label[text()="Email"]/following-sibling::input')  # поле ввода email
-    PASSWORD_INPUT_FIELD = (By.XPATH, './/label[text()="Пароль"]/following-sibling::input')  # поле ввода пароля
     SIGN_IN_BUTTON = (By.XPATH, './/button[text()="Войти"]')  # кнопка "Войти"
     REGISTRATION_LINK = (By.CSS_SELECTOR, 'a[href="/register"]')  # ссылка "Зарегистрироваться"
     FORGOT_PASSWORD_LINK = (By.CSS_SELECTOR, 'a[href="/forgot-password"]')  # ссылка "Восстановить пароль"
@@ -30,17 +35,12 @@ class AuthPageLocators:
 
 class RegistrationPageLocators:
     NAME_INPUT_FIELD = (By.XPATH, './/label[text()="Имя"]/following-sibling::input')  # поле ввода имени
-    EMAIL_INPUT_FIELD = (By.XPATH, './/label[text()="Email"]/following-sibling::input')  # поле ввода email
-    PASSWORD_INPUT_FIELD = (By.XPATH, './/label[text()="Пароль"]/following-sibling::input')  # поле ввода пароля
     REGISTRATION_BUTTON = (By.XPATH, './/button[text()="Зарегистрироваться"]')  # кнопка "Зарегистрироваться"
-    SIGN_IN_LINK = (By.CSS_SELECTOR, 'a[href="/login"]')  # ссылка "Войти"
     INCORRECT_PASSWORD_TEXT = (By.CSS_SELECTOR, 'p[class*="input__error"]')  # валидация при вводе некорректного пароля
 
 
 class ForgotPasswordPageLocators:
-    EMAIL_INPUT_FIELD = (By.XPATH, './/label[text()="Email"]/following-sibling::input')  # поле ввода email
     FORGOT_PASSWORD_BUTTON = (By.XPATH, './/button[text()="Восстановить"]')  # кнопка "Восстановить"
-    SIGN_IN_LINK = (By.CSS_SELECTOR, 'a[href="/login"]')  # ссылка "Войти"
 
 
 class PersonalAccountPageLocators:
