@@ -5,7 +5,6 @@ class UnauthorizedUserGeneralLocators:
     EMAIL_INPUT_FIELD = (By.XPATH, './/label[text()="Email"]/following-sibling::input')  # поле ввода email
     PASSWORD_INPUT_FIELD = (By.XPATH, './/label[text()="Пароль"]/following-sibling::input')  # поле ввода пароля
     SIGN_IN_LINK = (By.CSS_SELECTOR, 'a[href="/login"]')  # ссылка "Войти"
-    NAME_INPUT_FIELD = (By.XPATH, './/label[text()="Имя"]/following-sibling::input')  # поле ввода имени
 
 
 class MainPageLocators:
