@@ -2,7 +2,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
 from data import Data
-from locators import MainPageLocators, HeaderLocators, AuthPageLocators, PersonalAccountPageLocators, UnauthorizedUserGeneralLocators
+from locators import MainPageLocators, HeaderLocators, AuthPageLocators, UnauthorizedUserGeneralLocators
 
 
 def test_authorization_by_personal_account_button(driver):

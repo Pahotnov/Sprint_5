@@ -14,7 +14,7 @@ def test_registration_valid_email_and_password(driver):
     driver.find_element(*MainPageLocators.SIGN_IN_ACCOUNT_BUTTON).click()
     driver.find_element(*AuthPageLocators.REGISTRATION_LINK).click()
     # Ввод валидных имени, email, пароля
-    driver.find_element(*UnauthorizedUserGeneralLocators.NAME_INPUT_FIELD).send_keys(Data.NAME)
+    driver.find_element(*RegistrationPageLocators.NAME_INPUT_FIELD).send_keys(Data.NAME)
     driver.find_element(*UnauthorizedUserGeneralLocators.EMAIL_INPUT_FIELD).send_keys(fake_email)
     driver.find_element(*UnauthorizedUserGeneralLocators.PASSWORD_INPUT_FIELD).send_keys(password)
     # Нажать кнопку "Зарегистрироваться"
